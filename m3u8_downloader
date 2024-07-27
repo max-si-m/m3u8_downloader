@@ -15,7 +15,7 @@ ffmpeg -protocol_whitelist file,https,tcp,tls -i "$url" -bsf:a aac_adtstoasc -vc
 
 # Check the exit status of ffmpeg
 if [ $? -eq 0 ]; then
-  echo "The conversion was successful!"
+  echo "The conversion was successful! - $output_file.mp4"
 else
   echo "Error during conversion. Check the input parameters and try again."
 fi
